@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<!-- CEO -->
+		<meta name="description" content="Apartamento de vacaciones en Nerja, Málaga, con vistas al mar y cerca de la playa, ideal para disfrutar del turismo cultural y de playa de la Costa del Sol. Cueva de Nerja, Frigiliana, Málaga, Rio chíllar, Verano Azul, Nuria Fergó, Verano, Playa,Costa del sol,Andalucia," >
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LodgingBusiness",
+				"name": "Apartamento en Nerja",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Calle X",
+					"addressLocality": "Nerja",
+					"addressRegion": "Málaga",
+					"postalCode": "29780",
+					"addressCountry": "ES"
+				},
+				"url": "https://tu-sitio.com",
+				"description": "Apartamento de vacaciones con vistas al mar en Nerja, ideal para disfrutar de la playa y la cultura local.",
+				"image": "https://tu-sitio.com/imagen-apartamento.jpg",
+				"priceRange": "€€",
+				"availability": "InStock",
+				"checkinTime": "14:00",
+				"checkoutTime": "12:00"
+			}
+		</script>
 		<title>Mi apartamento 60</title>
-		<link rel="icon" type="image/x-icon" href="images/logo.png" />
-		<link rel="stylesheet" href="styles/reset.css" />
-		<link rel="stylesheet" href="styles/index.css" />
-		<link rel="stylesheet" href="styles/reviews.css" />
+		<link rel="icon" type="image/x-icon" href="images/logo.webp" >
+		<link rel="stylesheet" href="styles/reset.css" >
+		<link rel="stylesheet" href="styles/styles.css" >
 	</head>
 	<body>
 		<header>
 			<nav>
-				<div class="logo">
+				<button class="hamburger-menu" id="hamburger-menu"><img src="images/logo.webp" alt="logo" class="mobile-logo" ></button>
+				<div class="logo" id="logo">
 					<a href="index.html">
-						<img src="images/logo.png" alt="logo" />
+						<img src="images/logo.webp" alt="logo" >
 					</a>
-					<a class="title"href="apartament.html">
+					<a class="title" href="apartament.html">
 						<h1 class="title">Mi Apartamento 60</h1>
 					</a>
 				</div>
 
-				<ul class="nav-links">
+				<ul class="nav-links" id="nav-links">
+					<li><a class="mobile-header" href="index.html">Home</a></li>
+					<li><a class="mobile-header" href="apartament.html">Mi Apartamento 60</a></li>
 					<li><a class="title" href="freeTime.html">Ocio</a></li>
 					<li><a class="title" href="restaurant.html">Restauración</a></li>
 					<li><a class="title" href="reviews.html">Reseñas</a></li>
@@ -29,52 +55,66 @@
 				</ul>
 			</nav>
 		</header>
-		<section >
+		<section class="section-review">
 			<h2 class="title-section">Reseñas</h2>
-			<div class="slider-container">
-				<ul class="slider-review">
-					<li id="review1">
-						<img src="images/opinion/review1.jpg" alt="" />
+			<div class="slider-container-review">
+				<ul class="slider-review" id="slider-review">
+					<li class="review">
+						<img src="images/opinion/review1.webp" alt="opinion-review-1" >
 					</li>
-					<li id="review2">
-						<img src="images/opinion/review2.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review2.webp" alt="opinion-review-2" >
 					</li>
-					<li id="review3">
-						<img src="images/opinion/review3.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review3.webp" alt="opinion-review-3" >
 					</li>
-					<li id="review4">
-						<img src="./images/opinion/review4.jpg" alt="" />
+					<li class="review">
+						<img src="./images/opinion/review4.webp" alt="opinion-review-4" >
 					</li>
-					<li id="review5">
-						<img src="images/opinion/review5.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review5.webp" alt="opinion-review-5" >
 					</li>
-					<li id="review6">
-						<img src="images/opinion/review6.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review6.webp" alt="opinion-review-6" >
 					</li>
-					<li id="review7">
-						<img src="images/opinion/review7.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review7.webp" alt="opinion-review-7" >
 					</li>
-					<li id="review8">
-						<img src="images/opinion/review8.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review8.webp" alt="opinion-review-8" >
 					</li>
-					<li id="review9">
-						<img src="images/opinion/review9.jpg" alt="" />
+					<li class="review">
+						<img src="images/opinion/review9.webp" alt="opinion-review-9" >
 					</li>
 				</ul>
 			</div>
-
-			<button class="slider-review-btn prev-review-btn">&#10094;</button>
-			<button class="slider-review-btn next-review-btn">&#10095;</button>
+			<div class="button-review-container">
+				<button class="slider-review-btn prev-review-btn">&#10094;</button>
+				<button class="slider-review-btn next-review-btn">&#10095;</button>
+			</div>
 		</section>
 		<footer>
-			<figcaption>
-				<h6>Web &copy; 2025 mariognDev. Todos los derechos reservados</h6>
-			</figcaption>
-
-			<a href="https://www.facebook.com/MiApartamento60" target="_blank">
-				<img src="images/logo-facebook-min.png" alt="facebook" />
-			</a>
+			<figure>
+				<figcaption>
+					<h6>Video&copy;2023 <a class="footer-link" href="https://www.andalucia.org/" target="_blank"> Junta de Andalucia</a></h6>
+					<h6>Web&copy;2025 mariognDev. Todos los derechos reservados</h6>
+				</figcaption>
+			</figure>
+			<div class="footer-profile-links">
+				<a href="https://www.facebook.com/MiApartamento60" target="_blank">
+					<img src="images/logo-facebook-min.webp" alt="facebook-logo" >
+				</a>
+				<a href="https://www.airbnb.es/rooms/24676441?source_impression_id=p3_1743416127_P3-0y1GViBSvKwTT" target="_blank">
+					<img src="images/airbnb_4494647-min.webp" alt="airbnb-logo" >
+				</a>
+				<a
+					href="https://www.booking.com/hotel/es/mi-apartamento-60.es.html?aid=311090&label=mi-apartamento-60-_j4zqlBn713Y2jJmMX8UBgS338498590011%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-632859952942%3Alp9220795%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80&sid=c84168d33396c3595537a271cfea3f8c&dest_id=-393985&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1743415767&srpvid=4e3b475d366c05fd&type=total&ucfs=1&"
+					target="_blank"
+				>
+					<img src="images/png-transparent-booking-com-app-logo-tech-companies-thumbnail.webp" alt="booking-logo" >
+				</a>
+			</div>
 		</footer>
-		<script src="scripts/script-review.js"></script>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>

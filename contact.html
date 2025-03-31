@@ -1,45 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<!-- CEO -->
+		<meta name="description" content="Apartamento de vacaciones en Nerja, Málaga, con vistas al mar y cerca de la playa, ideal para disfrutar del turismo cultural y de playa de la Costa del Sol. Cueva de Nerja, Frigiliana, Málaga, Rio chíllar, Verano Azul, Nuria Fergó, Verano, Playa,Costa del sol,Andalucia," >
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LodgingBusiness",
+				"name": "Apartamento en Nerja",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Calle X",
+					"addressLocality": "Nerja",
+					"addressRegion": "Málaga",
+					"postalCode": "29780",
+					"addressCountry": "ES"
+				},
+				"url": "https://tu-sitio.com",
+				"description": "Apartamento de vacaciones con vistas al mar en Nerja, ideal para disfrutar de la playa y la cultura local.",
+				"image": "https://tu-sitio.com/imagen-apartamento.jpg",
+				"priceRange": "€€",
+				"availability": "InStock",
+				"checkinTime": "14:00",
+				"checkoutTime": "12:00"
+			}
+		</script>
 		<title>Mi apartamento 60</title>
-		<link rel="icon" type="image/x-icon" href="images/logo.png" />
-		<link rel="stylesheet" href="styles/reset.css" />
-		<link rel="stylesheet" href="styles/index.css" />
-      <link rel="stylesheet" href="styles/contact.css" />
+		<link rel="icon" type="image/x-icon" href="images/logo.webp" >
+		<link rel="stylesheet" href="styles/reset.css" >
+		<link rel="stylesheet" href="styles/styles.css" >
 	</head>
 	<body>
 		<header>
 			<nav>
+				<button class="hamburger-menu" id="hamburger-menu"><img src="images/logo.webp" alt="logo" class="mobile-logo" ></button>
 				<div class="logo">
 					<a href="index.html">
-						<img src="images/logo.png" alt="logo" />
+						<img src="images/logo.webp" alt="logo" >
 					</a>
-					<a class="title"href="apartament.html">
+					<a class="title" href="apartament.html">
 						<h1 class="title">Mi Apartamento 60</h1>
 					</a>
 				</div>
 
-				<ul class="nav-links">
+				<ul class="nav-links" id="nav-links">
+					<li><a class="mobile-header" href="index.html">Home</a></li>
+					<li><a class="mobile-header" href="apartament.html">Mi Apartamento 60</a></li>
 					<li><a class="title" href="freeTime.html">Ocio</a></li>
-					<li><a class="title"href="restaurant.html">Restauración</a></li>
+					<li><a class="title" href="restaurant.html">Restauración</a></li>
 					<li><a class="title" href="reviews.html">Reseñas</a></li>
-					<li><a class="title"href="contact.html">Contacto</a></li>
+					<li><a class="title" href="contact.html">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
-		<section>
-			<h2>En construcción</h2>
+		<section class="contact-section">
+			<div class="location">
+				<h2> class="title-section">Ubicación</h2>
+				<h3>Mi Apartamento 60</h3>
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5291.083073816225!2d-3.883098422874249!3d36.743458670893865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7225628721c76f%3A0x8896c0100e7012a0!2sMiApartamento60!5e1!3m2!1ses!2ses!4v1743370362426!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="form-container">
+				<h2 class="title-section">Contacto</h2>
+				<form class="form" action="https://formspree.io/f/mnnpbwlk" method="POST" id="contact-form">
+					<label class="label-contact" for="name"
+						>Nombre
+						<input class="input-contact" type="text" id="name" name="name" required >
+					</label>
+					<span class="error"></span>
+					<label class="label-contact" for="email">
+						Email
+						<input class="input-contact" type="email" id="email" name="email" required >
+					</label>
+					<span class="error"></span>
+					<label class="label-contact" for="textareaMessage">
+						Mensaje
+						<textarea class="textarea" id="textareaMessage" name="message" placeholder="Escriba aqui su mensaje para el anfitrión" required></textarea>
+					</label>
+					<span class="error" id="errorMessage"></span>
+					<label class="label-contact" for="motive">Motivo</label>
+					<select class="input-contact-select" id="motive" name="motive" required>
+						<option value="" disabled selected>Seleccione una opción</option>
+						<option value="Informacion">Informacion</option>
+						<option value="Precio">Precio</option>
+						<option value="Disponibilidad">Disponibilidad</option>
+						<option value="Otro">Otro</option>
+					</select>
+					<span class="error"></span>
+					<button class="button-contact" type="submit">Enviar</button>
+				</form>
+			</div>
 		</section>
 		<footer>
-			<figcaption>
-				<h6>Web &copy; 2025 mariognDev. Todos los derechos reservados</h6>
-			</figcaption>
-
-			<a class ="footer-link" href="https://www.facebook.com/MiApartamento60" target="_blank">
-				<img src="images/logo-facebook-min.png" alt="facebook" />
-			</a>
+			<figure>
+				<figcaption>
+					<h6>Video&copy;2023 <a class="footer-link" href="https://www.andalucia.org/" target="_blank"> Junta de Andalucia</a></h6>
+					<h6>Web&copy;2025 mariognDev. Todos los derechos reservados</h6>
+				</figcaption>
+			</figure>
+			<div class="footer-profile-links">
+				<a href="https://www.facebook.com/MiApartamento60" target="_blank">
+					<img src="images/logo-facebook-min.webp" alt="facebook-logo" >
+				</a>
+				<a href="https://www.airbnb.es/rooms/24676441?source_impression_id=p3_1743416127_P3-0y1GViBSvKwTT" target="_blank">
+					<img src="images/airbnb_4494647-min.webp" alt="airbnb-logo" >
+				</a>
+				<a
+					href="https://www.booking.com/hotel/es/mi-apartamento-60.es.html?aid=311090&label=mi-apartamento-60-_j4zqlBn713Y2jJmMX8UBgS338498590011%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-632859952942%3Alp9220795%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80&sid=c84168d33396c3595537a271cfea3f8c&dest_id=-393985&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1743415767&srpvid=4e3b475d366c05fd&type=total&ucfs=1&"
+					target="_blank"
+				>
+					<img src="images/png-transparent-booking-com-app-logo-tech-companies-thumbnail.webp" alt="booking-logo" >
+				</a>
+			</div>
 		</footer>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>

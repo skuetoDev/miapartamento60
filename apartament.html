@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<!-- CEO -->
+		<meta name="description" content="Apartamento de vacaciones en Nerja, Málaga, con vistas al mar y cerca de la playa, ideal para disfrutar del turismo cultural y de playa de la Costa del Sol. Cueva de Nerja, Frigiliana, Málaga, Rio chíllar, Verano Azul, Nuria Fergó, Verano, Playa,Costa del sol,Andalucia," >
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LodgingBusiness",
+				"name": "Apartamento en Nerja",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Calle X",
+					"addressLocality": "Nerja",
+					"addressRegion": "Málaga",
+					"postalCode": "29780",
+					"addressCountry": "ES"
+				},
+				"url": "https://tu-sitio.com",
+				"description": "Apartamento de vacaciones con vistas al mar en Nerja, ideal para disfrutar de la playa y la cultura local.",
+				"image": "https://tu-sitio.com/imagen-apartamento.jpg",
+				"priceRange": "€€",
+				"availability": "InStock",
+				"checkinTime": "14:00",
+				"checkoutTime": "12:00"
+			}
+		</script>
 		<title>Mi apartamento 60</title>
-		<link rel="icon" type="image/x-icon" href="images/logo.png" />
-		<link rel="stylesheet" href="styles/reset.css" />
-		<link rel="stylesheet" href="styles/index.css" />
-		<link rel="stylesheet" href="styles/apartament.css" />
+		<link rel="icon" type="image/x-icon" href="images/logo.webp" >
+		<link rel="stylesheet" href="styles/reset.css" >
+		<link rel="stylesheet" href="styles/styles.css" >
 	</head>
 	<body>
 		<header>
 			<nav>
+				<button class="hamburger-menu" id="hamburger-menu"><img src="images/logo.webp" alt="logo" class="mobile-logo" ></button>
 				<div class="logo">
 					<a href="index.html">
-						<img src="images/logo.png" alt="logo" />
+						<img src="images/logo.webp" alt="logo" >
 					</a>
-					<a class="title"href="apartament.html">
+					<a class="title" href="apartament.html">
 						<h1 class="title">Mi Apartamento 60</h1>
 					</a>
 				</div>
-
-				<ul class="nav-links">
+				<ul class="nav-links" id="nav-links">
+					<li><a class="mobile-header" href="index.html">Home</a></li>
+					<li><a class="mobile-header" href="apartament.html">Mi Apartamento 60</a></li>
 					<li><a href="freeTime.html">Ocio</a></li>
 					<li><a href="restaurant.html">Restauración</a></li>
 					<li><a href="reviews.html">Reseñas</a></li>
@@ -31,61 +56,86 @@
 		</header>
 		<section>
 			<h2 class="title-section">Imagenes de Mi Apartamento 60</h2>
-			<div class="slider-container">
-				<ul class="slider-photo">
-					<li id="photo1">
-						<img src="images/apartament_img/salon_comedor-min.jpg" alt="" />
-						<h3>Salon comedor</h3>
-						<p>Diseñado para relajarte, el apartamento cuenta con aire acondicionado y plataformas de streaming populares.</p>
-					</li>
-					<li id="photo2">
-						<img src="images/apartament_img/habitacion_matrimonio-min.jpg" alt="" />
-						<h3>Habitación Matrimonio</h3>
-						<p>Con ventanas de doble cristal totalmente aisladas del exterior. El apartamento se encuentra a escasos metros de la playa.</p>
-					</li>
-					<li id="photo3">
-						<img src="images/apartament_img/habitacion2-min.jpg" alt="" />
-						<h3>Dos habitaciones o Una</h3>
-						<p>Equipado con 2 habitaciones que pueden comunicarse.Dispone de una cama individual ampliable a doble y posibilidad de cuna y trona.</p>
-					</li>
-					<li id="photo4">
-						<img src="images/apartament_img/cocina-min.jpg" alt="" />
-						<h3>Cocina moderna y funcional</h3>
-						<p>Acabados en madera y blanco, equipada con todo lo necesario para que disfrutes de tus comidas durante las vacaciones.</p>
-					</li>
-					<li id="photo5">
-						<img src="images/apartament_img/baño1-min.jpg" alt="" />
-						<h3>Espacio diseñado para disfrutar</h3>
-						<p>Lavabo moderno recien reformado, con detalles que aportan estilo y comodidad a tu estancia vacacional.</p>
-					</li>
-					<li id="photo6">
-						<img src="images/apartament_img/cama_matrimonio-min.jpg" alt="" />
-						<h3>Preparado para cualquier ocasión</h3>
-						<p>Decorado con detalles románticos, como cisnes de toallas y pétalos de rosa, ideal para disfrutar de unas vacaciones especiales.</p>
-					</li>
-					<li id="photo7">
-						<img src="images/apartament_img/cuberteria-min.jpg" alt="" />
-						<h3>Completamente equipado</h3>
-						<p>El apartamento cuenta con menaje de cocina, cuberteria, cristaleria y todo lo necesario para que tu solo te preocupes de disfrutar.</p>
-					</li>
-					<li id="photo8">
-						<img src="images/apartament_img/menaje-min.jpg" alt="" />
-						<h3>Desayunos inolvidables</h3>
-						<p>Cuenta con lavadora, microondas y cafetera. ¡Te sentiras como en casa!</p>
-					</li>
-				</ul>
-
-				<button class="slider-photo-btn prev-photo-btn">&#10094;</button>
-				<button class="slider-photo-btn next-photo-btn">&#10095;</button>
+			<div class="section-container">
+				<div class="section-item-apartament">
+					<h3>Salon comedor</h3>
+					<img src="images/apartament_img/salon_comedor-min.webp" alt="salon-comedor" >
+					<p>Diseñado para relajarte, el apartamento cuenta con aire acondicionado y plataformas de streaming populares.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Habitación Matrimonio</h3>
+					<img src="images/apartament_img/habitacion_matrimonio-min.webp" alt="habitacion_matrimonio" >
+					<p>Con ventanas de doble cristal totalmente aisladas del exterior. El apartamento se encuentra a escasos metros de la playa.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Equipado con todas las comodidades</h3>
+					<img src="images/apartament_img/salon2-min_11zon.webp" alt="salon-tv-netflix" >
+					<p>El salon cuenta con una gran pantalla y diversas plataformas de streaming. Tambien dispondrás de aire acondicionado.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Dos habitaciones o Una</h3>
+					<img src="images/apartament_img/habitacion2-min.webp" alt="segunda-habitacion" >
+					<p>Equipado con 2 habitaciones que pueden comunicarse.Dispone de una cama individual ampliable a doble y posibilidad de cuna y trona.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Cocina moderna y funcional</h3>
+					<img src="images/apartament_img/cocina-min.webp" alt="cocina" >
+					<p>Acabados en madera y blanco, equipada con todo lo necesario para que disfrutes de tus comidas durante las vacaciones.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Espacio diseñado para disfrutar</h3>
+					<img src="images/apartament_img/baño1-min.webp" alt="lavavo-baño" >
+					<p>Lavabo moderno recien reformado, con detalles que aportan estilo y comodidad a tu estancia vacacional.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Comedor hast para 4 personas</h3>
+					<img src="images/apartament_img/salon3d-min_11zon.webp" alt="comedor-4-personas" >
+					<p>Un comedor para compartir desayunos, comidas o algun aperitivo en la mejor compañia.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Un spa completo</h3>
+					<img src="images/apartament_img/baño2-min.webp" alt="baño-ducha" >
+					<p>Nuestro baño completamente reformado. Sentirás que estas en un autentico spa, para que disfrutes de tus vacaciones con todas las comodidades.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Preparado para cualquier ocasión</h3>
+					<img src="images/apartament_img/cama_matrimonio-min.webp" alt="cama-san-valentin" >
+					<p>Hasta el último detalle, que hará que disfrutes de tus vacaciones en un autentico paraiso.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Completamente equipado</h3>
+					<img src="images/apartament_img/cuberteria-min.webp" alt="cuberteria" >
+					<p>El apartamento cuenta con menaje de cocina, cuberteria, cristaleria y todo lo necesario para que tu solo te preocupes de disfrutar.</p>
+				</div>
+				<div class="section-item-apartament">
+					<h3>Desayunos inolvidables</h3>
+					<img src="images/apartament_img/menaje-min.webp" alt="cafetera" >
+					<p>Cuenta con lavadora, microondas y cafetera. ¡Te sentiras como en casa!</p>
+				</div>
+			</div>
 		</section>
 		<footer>
-			<figcaption>
-				<h6>Web &copy; 2025 mariognDev. Todos los derechos reservados</h6>
-			</figcaption>
-			<a class ="footer-link" href="https://www.facebook.com/MiApartamento60" target="_blank">
-				<img src="images/logo-facebook-min.png" alt="facebook" />
-			</a>
+			<figure>
+				<figcaption>
+					<h6>Video&copy;2023 <a class="footer-link" href="https://www.andalucia.org/" target="_blank"> Junta de Andalucia</a></h6>
+					<h6>Web&copy;2025 mariognDev. Todos los derechos reservados</h6>
+				</figcaption>
+			</figure>
+			<div class="footer-profile-links">
+				<a href="https://www.facebook.com/MiApartamento60" target="_blank">
+					<img src="images/logo-facebook-min.webp" alt="facebook-logo" >
+				</a>
+				<a href="https://www.airbnb.es/rooms/24676441?source_impression_id=p3_1743416127_P3-0y1GViBSvKwTT" target="_blank">
+					<img src="images/airbnb_4494647-min.webp" alt="airbnb-logo" >
+				</a>
+				<a
+					href="https://www.booking.com/hotel/es/mi-apartamento-60.es.html?aid=311090&label=mi-apartamento-60-_j4zqlBn713Y2jJmMX8UBgS338498590011%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-632859952942%3Alp9220795%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80&sid=c84168d33396c3595537a271cfea3f8c&dest_id=-393985&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1743415767&srpvid=4e3b475d366c05fd&type=total&ucfs=1&"
+					target="_blank"
+				>
+					<img src="images/png-transparent-booking-com-app-logo-tech-companies-thumbnail.webp" alt="booking-logo" >
+				</a>
+			</div>
 		</footer>
-		<script src="scripts/script-apartament.js"></script>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>
