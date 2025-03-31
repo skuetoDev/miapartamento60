@@ -604,7 +604,6 @@ a.footer-link:hover {
 		body {
 			display: grid;
 
-			grid-template-rows: 4.1em 1fr 3.7em;
 		}
 		.hamburger-menu {
 			display: block;
