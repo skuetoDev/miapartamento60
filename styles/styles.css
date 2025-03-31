@@ -380,12 +380,6 @@ form {
 	height: 2.5em;
 	margin:0.5em;
 }
-.error {
-	color: #c91111;
-	margin: 0.2em;
-	font-size: 0.8em;
-	height: 0.2em;
-}
 .textarea {
 	width: 90%;
 	height: 4em;
