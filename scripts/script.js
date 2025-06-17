@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		return currentIndex;
 	}
 
-	
 	if (sliderReview && prevBtnReview && nextBtnReview) {
 		prevBtnReview.addEventListener('click', () => {
 			currentSliderReview = moveSlider(sliderReview, --currentSliderReview, slideWidthReview, 0);
@@ -35,10 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if (hamburgerMenu && navLinks) {
 		hamburgerMenu.addEventListener('click', () => {
-			
 			navLinks.classList.toggle('show');
 			logo.classList.toggle('show');
-			
 		});
 	} else {
 		console.error('Elementos no encontrados: revisa los IDs en tu HTML');
@@ -48,34 +45,32 @@ document.addEventListener('DOMContentLoaded', function () {
 /* function to make big with click reviews in slider */
 
 document.addEventListener('DOMContentLoaded', function () {
-	const listItems = document.querySelectorAll('.review'); 
+	const listItems = document.querySelectorAll('.review');
 
 	listItems.forEach((item) => {
 		item.addEventListener('click', () => {
 			if (item.classList.contains('scaled')) {
-				
 				item.classList.remove('scaled');
 			} else {
-				
 				item.classList.add('scaled');
 			}
 		});
 	});
 });
 
-/* funtion to grow textarea of contact if its necesary*/
+/* funtion to grow textarea of contact if its necesary */
 
-// function adjustHeight(event) {
-// 	const textarea = event.target;
-// 	if (!textarea.dataset.minHeight) {
-// 		textarea.dataset.minHeight = textarea.offsetHeight;
+//  function adjustHeight(event) {
+//  	const textarea = event.target;
+//  	if (!textarea.dataset.minHeight) {
+//  		textarea.dataset.minHeight = textarea.offsetHeight;
 // 	}
-// 	const minHeight = parseInt(textarea.dataset.minHeight, 10);
-// 	if (textarea.scrollHeight > textarea.offsetHeight) {
-// 		textarea.style.height = 'auto'; 
-// 		textarea.style.height = `${Math.max(textarea.scrollHeight, minHeight)}px`;
-// 	}
-// }
-// const textarea = document.getElementById('textareaMessage');
-// textarea.addEventListener('input', adjustHeight);
+//  	const minHeight = parseInt(textarea.dataset.minHeight, 10);
+//  	if (textarea.scrollHeight > textarea.offsetHeight) {
+//  		textarea.style.height = 'auto';
+//  		textarea.style.height = `${Math.max(textarea.scrollHeight, minHeight)}px`;
+//  	}
+//  }
+//  const textarea = document.getElementById('textareaMessage');
+//  textarea.addEventListener('input', adjustHeight);
 
