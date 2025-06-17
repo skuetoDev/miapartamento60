@@ -7,7 +7,7 @@ body {
 		'section '
 		'footer ';
 	grid-template-rows: 5em 1fr auto;
-	background-color: #f4fbff;
+	background-color: #D6F0FF;
 	min-height: 100vh;
 }
 
@@ -109,7 +109,7 @@ section {
 
 .title-section {
 	text-align: center;
-	margin: 2em 1em 0.25em 1em;
+	margin: 1em 1em 0.25em 1em;
 	font-size: 2em;
 	color: #0288d1;
 }
@@ -197,16 +197,16 @@ section {
 	justify-content: center;
 	margin: 1em;
 	padding: 5px;
-	background-color: #0288d1;
+	background-color: #b3e5fc;
 	border-radius: 15px;
-	box-shadow: 0 0 10px #212121;
+	box-shadow: 0 0 20px #0288d1;
 	position: relative;
 	max-width: 25em;
 }
 .section-item-apartament h3 {
 	font-size: 1.5em;
 	text-align: center;
-	color: #b3e5fc;
+	color: #0288d1;
 	margin: 0.5em;
 }
 .section-item-apartament img {
@@ -221,6 +221,7 @@ section {
 	line-height: 1.2em;
 	margin: 1em;
 	width: 80%;
+	color:#0288d1
 }
 
 /* Restaurant */
@@ -483,7 +484,7 @@ a.footer-link:hover {
 	text-decoration: none;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1160px) {
 	body {
 		display: grid;
 		grid-template-areas:
