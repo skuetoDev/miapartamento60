@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (item.classList.contains('scaled')) {
 				item.classList.remove('scaled');
 			} else {
+				listItems.forEach((otherItem) => {
+					otherItem.classList.remove('scaled');
+				});
 				item.classList.add('scaled');
 			}
 		});
