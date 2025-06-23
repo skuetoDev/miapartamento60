@@ -25,6 +25,56 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+
+/* function to make big with click reviews in slider */
+
+document.addEventListener('DOMContentLoaded', function () {
+	const listItems = document.querySelectorAll('.review');
+	
+	listItems.forEach((item) => {
+		item.addEventListener('click', () => {
+			if (item.classList.contains('scaled-review')) {
+				item.classList.remove('scaled-review');
+			} else {
+				listItems.forEach((otherItem) => {
+					otherItem.classList.remove('scaled-review');
+				});
+				item.classList.add('scaled-review');
+			}
+		});
+	});
+});
+
+
+//funciton to make move apartament in slider
+
+document.addEventListener('DOMContentLoaded', function () {
+	const sliderApartament = document.querySelector('.slider-apartament');
+	const prevBtnReview = document.querySelector('.prev-apartament-btn');
+	const nextBtnReview = document.querySelector('.next-apartament-btn');
+	let currentSliderApartament = 0;
+	const sliderWidthApartament = 700;
+
+	function moveSlider(slider, currentIndex, slideWidth, maxVisibleSlides) {
+		const maxSlide = slider.children.length - maxVisibleSlides;
+		currentIndex = currentIndex < 0 ? maxSlide : currentIndex > maxSlide ? 0 : currentIndex;
+		slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+		return currentIndex;
+	}
+
+	if (sliderApartament && prevBtnReview && nextBtnReview) {
+		prevBtnReview.addEventListener('click', () => {
+			currentSliderApartament = moveSlider(sliderApartament, --currentSliderApartament, sliderWidthApartament, 4);
+		});
+
+		nextBtnReview.addEventListener('click', () => {
+			currentSliderApartament = moveSlider(sliderApartament, ++currentSliderApartament, sliderWidthApartament, 4);
+		});
+	}
+});
+
+
+
 //function to make hamburger menu in mobile
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -41,39 +91,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		console.error('Elementos no encontrados: revisa los IDs en tu HTML');
 	}
 });
-
-/* function to make big with click reviews in slider */
-
-document.addEventListener('DOMContentLoaded', function () {
-	const listItems = document.querySelectorAll('.review');
-
-	listItems.forEach((item) => {
-		item.addEventListener('click', () => {
-			if (item.classList.contains('scaled')) {
-				item.classList.remove('scaled');
-			} else {
-				listItems.forEach((otherItem) => {
-					otherItem.classList.remove('scaled');
-				});
-				item.classList.add('scaled');
-			}
-		});
-	});
-});
-
-/* funtion to grow textarea of contact if its necesary */
-
-//  function adjustHeight(event) {
-//  	const textarea = event.target;
-//  	if (!textarea.dataset.minHeight) {
-//  		textarea.dataset.minHeight = textarea.offsetHeight;
-// 	}
-//  	const minHeight = parseInt(textarea.dataset.minHeight, 10);
-//  	if (textarea.scrollHeight > textarea.offsetHeight) {
-//  		textarea.style.height = 'auto';
-//  		textarea.style.height = `${Math.max(textarea.scrollHeight, minHeight)}px`;
-//  	}
-//  }
-//  const textarea = document.getElementById('textareaMessage');
-//  textarea.addEventListener('input', adjustHeight);
-

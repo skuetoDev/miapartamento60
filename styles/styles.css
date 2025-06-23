@@ -166,38 +166,76 @@ section {
 
 /* apartament */
 
-.section-item-apartament {
+.section-apartament {
+	overflow: hidden;
+	justify-items: center;
+	padding-bottom:2em;
+}
+.slider-container-apartament {
+	width: 90%;
+	height: 30em;
+	margin: 2em;
+	position: relative;
+	background-color: #b3e5fc;
+	border-radius: 1em;
+	overflow-x: hidden;
+	box-shadow: #0288d1 0px 0px 10px;
+	display:flex;
+	flex-direction: row;
+	
+	
+}
+
+.slider-apartament {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: 1em;
-	padding: 5px;
-	background-color: #b3e5fc;
-	border-radius: 15px;
-	box-shadow: 0 0 20px #0288d1;
-	position: relative;
-	max-width: 25em;
+	gap: 3em;
+	transition: transform 0.8s ease;
+	
 }
-.section-item-apartament h3 {
-	font-size: 1.5em;
-	text-align: center;
-	color: #0288d1;
-	margin: 0.5em;
+.slider-apartament:first-child {
+	margin-left: 10%;
 }
-.section-item-apartament img {
-	width: 90%;
-	height: 20em;
-	object-fit: cover;
+.slider-apartament li {
+
+	transition: all 0.3s ease-in-out;
+
+}
+.slider-apartament img {
+	max-height: 20em;
+	object-fit:fill;
+	border: #0288d1 2px solid;
 	border-radius: 10px;
+	box-shadow: #0288d1 0.5em 0.5em 1em;
 }
-.section-item-apartament p {
-	text-align: center;
-	font-size: 1.1em;
-	line-height: 1.2em;
-	margin: 1em;
-	width: 80%;
-	color:#0288d1
+
+.slider-apartament-btn {
+	background-color: #0288d1;
+	color: #fff;
+	border: none;
+	padding: 1.75em 2.2em;
+	border-radius: 50%;
+	cursor: pointer;
+	margin:1em;
+	
+}
+.slider-apartament-btn:hover {
+	background-color: #03A9F4;
+	color: #212121;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.button-apartament-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin:1em;
+}
+.scaled-apartament {
+	transform: scale(2);
+	transition: transform 0.5s ease;
 }
 
 /* Restaurant */
@@ -288,6 +326,7 @@ section {
 	box-shadow: #0288d1 0px 0px 10px;
 	display:flex;
 	flex-direction: row;
+	min-height: 41em;
 	
 }
 
@@ -312,12 +351,19 @@ section {
 	max-height: 20em;
 	object-fit:fill;
 	border: #0288d1 2px solid;
-
 	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
 }
 .slider-review img:hover {
 	cursor: pointer;
+}
+
+.section-review p{
+	font-size: 1.1em;
+	line-height: 1.2em;
+	width: 80%;
+	color:#0288d1;
+	text-align: center;
 }
 .slider-review-btn {
 	background-color: #0288d1;
@@ -326,6 +372,7 @@ section {
 	padding: 1.75em 2.2em;
 	border-radius: 50%;
 	cursor: pointer;
+	margin:1em;
 	
 }
 .slider-review-btn:hover {
@@ -341,7 +388,7 @@ section {
 	align-items: center;
 	margin:1em;
 }
-.scaled {
+.scaled-review {
 	transform: scale(2);
 	transition: transform 0.5s ease;
 }
@@ -436,7 +483,7 @@ section {
 	outline: none;
 }
 
-button {
+.button-contact {
 	background-color: #0288d1;
 	color: #fff;
 	border: none;
