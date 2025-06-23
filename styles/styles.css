@@ -500,8 +500,12 @@ section {
 	scale:1.3;
 }
 .button-contact:focus {
-	border: #fff solid 0.3em !important;
+	border: #03A9F4 solid 0.3em !important;
 	outline: none;
+}
+.error-span {
+	height: 2em;
+
 }
 .location h3 {
 	text-align: center;
